@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Text Example</title>
+</head>
+<body>
+    <h2>Binh Thanh</h2>
+
+    <!-- Button to show/hide form -->
+    <button onclick="toggleForm()">Change</button>
+
+    <!-- Form (initially hidden) -->
+    <form id="changeForm" style="display: none;">
+        <label for="inputText">Enter Text:</label>
+        <input type="text" id="inputText">
+
+        <!-- Submit button to change the text -->
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function toggleForm() {
+            // Toggle the display of the form
+            const form = document.getElementById('changeForm');
+            form.style.display = form.style.display === 'none' ? 'block' : 'none';
+        }
+
+        // Function to get the value of the submit button in the form
+        document.getElementById('changeForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevents the form from submitting and reloading the page
+            const submitButtonValue = event.submitter.value;
+            alert(`Submit Button Value: ${submitButtonValue}`);
+        });
+    </script>
+</body>
+</html>

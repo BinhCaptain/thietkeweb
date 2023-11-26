@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Size Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #sizeInfo {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Window Size Tracker</h2>
+    <p>Resize the window to see the updated width and height.</p>
+
+    <!-- Display window size information -->
+    <div id="sizeInfo"></div>
+
+    <script>
+        // Function to update window size information
+        function updateSizeInfo() {
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            const sizeInfo = document.getElementById('sizeInfo');
+            sizeInfo.textContent = `Window Size - Width: ${width}px, Height: ${height}px`;
+        }
+
+        // Initial update on page load
+        updateSizeInfo();
+
+        // Event listener for window resize
+        window.addEventListener('resize', updateSizeInfo);
+    </script>
+</body>
+</html>

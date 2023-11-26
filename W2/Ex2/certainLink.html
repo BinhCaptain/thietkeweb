@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlight Bold Words</title>
+    <style>
+        /* Define a class for highlighting */
+        .highlight {
+            font-weight: bold;
+            color: red; /* You can change the color as needed */
+        }
+    </style>
+</head>
+<body>
+    <h2>Highlighted Text Example</h2>
+
+    <!-- Link to trigger highlighting -->
+    <a href="#" id="highlightLink">Hover to Highlight</a>
+
+    <p id="textToHighlight">
+        This is <strong>some bold text</strong> to be highlighted.
+    </p>
+
+    <script>
+        // Function to add or remove the highlight class
+        function toggleHighlight() {
+            const textToHighlight = document.getElementById('textToHighlight');
+            textToHighlight.classList.toggle('highlight');
+        }
+
+        // Event listener for link hover
+        document.getElementById('highlightLink').addEventListener('mouseover', toggleHighlight);
+        document.getElementById('highlightLink').addEventListener('mouseout', toggleHighlight);
+    </script>
+</body>
+</html>
