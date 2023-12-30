@@ -1,0 +1,51 @@
+/* Piano.css */
+
+.piano {
+    display: flex;
+  }
+  
+  .octave {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .key {
+    box-sizing: border-box;
+    height: 120px;
+    width: 20px;
+    border: 1px solid #000;
+    margin: 2px;
+  }
+  
+  .white {
+    background-color: #fff;
+  }
+  
+  .black {
+    background-color: #000;
+    height: 80px;
+    width: 12px;
+    margin-left: -6px;
+    margin-right: -6px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .black:before,
+  .black:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    background-color: #000;
+  }
+  
+  .black:before {
+    left: 0;
+  }
+  
+  .black:after {
+    right: 0;
+  }
+  
